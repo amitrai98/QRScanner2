@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/layout_buttons"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_centerInParent="true"
+       android:orientation="vertical">
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:gravity="center"
+           android:layout_gravity="top"
+           android:onClick="openQr"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="5dp"
+           android:text="Scan QR"/>
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:layout_gravity="bottom"
+           android:onClick="openSite"
+           android:layout_marginTop="30dp"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="5dp"
+           android:text="Go to site"/>
+   </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

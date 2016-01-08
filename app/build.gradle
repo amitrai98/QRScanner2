@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.0'
+
+    defaultConfig {
+        applicationId "com.example.amitrai.qrscanner"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        applicationId "${project.group}.zbar.sample"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile project(':core')
+    compile project(':zbar:zbar')
+    compile project(':zxing:zxing')
+    compile 'me.dm7.barcodescanner:zbar:1.8.2'
+    compile supportLibraryDependency
+}
